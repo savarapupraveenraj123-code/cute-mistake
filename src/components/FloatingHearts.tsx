@@ -1,14 +1,17 @@
 import { useMemo } from "react";
 
+const emojis = ["♥", "💕", "🌸", "✨", "💗", "🦋", "💖", "🌷"];
+
 const FloatingHearts = () => {
   const hearts = useMemo(
     () =>
-      Array.from({ length: 15 }, (_, i) => ({
+      Array.from({ length: 22 }, (_, i) => ({
         id: i,
         left: `${Math.random() * 100}%`,
-        size: 14 + Math.random() * 18,
-        duration: 8 + Math.random() * 12,
-        delay: Math.random() * 10,
+        size: 12 + Math.random() * 20,
+        duration: 8 + Math.random() * 14,
+        delay: Math.random() * 12,
+        emoji: emojis[i % emojis.length],
       })),
     []
   );
@@ -26,7 +29,7 @@ const FloatingHearts = () => {
             animationDelay: `${h.delay}s`,
           }}
         >
-          ♥
+          {h.emoji}
         </span>
       ))}
     </div>

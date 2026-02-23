@@ -130,10 +130,31 @@
     box-shadow: 0 0 20px hsl(340 60% 75% / 0.4);
   }
   50% {
-    box-shadow: 0 0 40px hsl(340 60% 75% / 0.7);
+    box-shadow: 0 0 50px hsl(340 60% 75% / 0.7), 0 0 80px hsl(270 50% 80% / 0.3);
   }
 }
 
 .btn-forgive {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Cute bounce */
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Wiggle */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  75% { transform: rotate(10deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 1.5s ease-in-out infinite;
 }

@@ -61,7 +61,7 @@ const Index = () => {
       <section className="relative z-10 flex justify-center pb-20">
         <button
           onClick={() => setShowPopup(true)}
-          className="animate-fade-up delay-5 btn-forgive bg-primary text-primary-foreground px-10 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 cursor-pointer"
+          className="btn-forgive bg-primary text-primary-foreground px-10 py-4 rounded-full text-lg font-semibold hover:scale-105 transition-transform duration-300 cursor-pointer"
         >
           Forgive Me Akka 💕
         </button>

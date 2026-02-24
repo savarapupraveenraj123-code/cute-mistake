@@ -1,4 +1,5 @@
 import { useState } from "react";
+import akkaPhoto from "@/assets/akka-photo.png";
 import FloatingHearts from "@/components/FloatingHearts";
 import {
   Dialog,
@@ -53,6 +54,15 @@ const Index = () => {
         <h2 className="animate-fade-up delay-3 text-2xl md:text-3xl font-bold text-primary mb-8">
           You Mean the World to Me 🌸
         </h2>
+
+        {/* Photo */}
+        <div className="mb-8 animate-fade-up delay-3">
+          <div className="w-56 h-56 md:w-64 md:h-64 mx-auto rounded-full overflow-hidden border-4 border-primary/30 shadow-xl">
+            <img src={akkaPhoto} alt="Me and Akka" className="w-full h-full object-cover" />
+          </div>
+          <p className="mt-3 text-sm text-muted-foreground italic">Forever together 💕</p>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {[
             { text: "My First Best Friend", emoji: "👯‍♀️" },
